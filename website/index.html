@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zunn</title>
+<meta name="description" content="Zunn is a quiet launcher for your projects, apps, links and notes.">
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-win" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5.5 10.5 4.5v6.7H3zM11.5 4.4 21 3v8.2h-9.5zM3 12.2h7.5v6.7L3 17.9zM11.5 12.2H21V21l-9.5-1.3z"/></symbol>
+  <symbol id="i-mac" viewBox="0 0 24 24"><path fill="currentColor" d="M12.15 6.9c-.95 0-2.42-1.08-3.96-1.04-2.04.03-3.91 1.18-4.96 3.01-2.12 3.68-.55 9.1 1.52 12.09 1.01 1.45 2.21 3.09 3.79 3.04 1.52-.07 2.09-.99 3.94-.99 1.83 0 2.35.99 3.96.95 1.64-.03 2.68-1.48 3.68-2.95 1.16-1.69 1.64-3.33 1.66-3.42-.04-.01-3.18-1.22-3.22-4.86-.03-3.04 2.48-4.49 2.6-4.56-1.43-2.09-3.62-2.32-4.39-2.38-2-.16-3.68 1.09-4.61 1.09zM15.53 3.83c.84-1.01 1.4-2.43 1.25-3.83-1.21.05-2.66.8-3.53 1.82-.78.9-1.45 2.34-1.27 3.71 1.34.1 2.72-.69 3.55-1.7z"/></symbol>
+  <symbol id="i-linux" viewBox="0 0 24 24"><g fill="currentColor"><path d="M12 2c-2.6 0-4 2.2-4 5 0 1.5-.4 2.4-1.3 3.7C5.6 12.3 4.5 14.5 4.5 17c0 1.4.6 2.2 1.6 2.6 1 .4 1.9.9 2.4 1.9.4.9 1.3 1.5 3.5 1.5s3.1-.6 3.5-1.5c.5-1 1.4-1.5 2.4-1.9 1-.4 1.6-1.2 1.6-2.6 0-2.5-1.1-4.7-2.2-6.3C16.4 9.400 16 8.500 16 7c0-2.800-1.400-5-4-5z"/></g><ellipse cx="12" cy="15.500" rx="3.200" ry="4.300" fill="#0b0b0c"/><circle cx="10.200" cy="6.800" r=".9" fill="#0b0b0c"/><circle cx="13.800" cy="6.800" r=".9" fill="#0b0b0c"/></symbol>
+</svg>
+
+<canvas id="stars" aria-hidden="true"></canvas>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="favicon.png" alt="">Zunn</a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#download">Download</a>
+      <a href="#help">Help</a>
+    </nav>
+  </div>
+  <div class="track" aria-hidden="true"><i id="thumb"></i></div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <h1>Zunn</h1>
+    <p class="lead">A quiet launcher for the things you open every day. One hotkey, from anywhere.</p>
+    <div class="cta">
+      <a class="btn solid" href="downloads/Zunn.exe" data-file="Zunn.exe" download><svg><use href="#i-win"/></svg>Windows</a>
+      <span class="btn off" title="Coming soon"><svg><use href="#i-mac"/></svg>macOS <small>soon</small></span>
+      <a class="btn solid" href="downloads/Zunn-Linux.tar.gz" data-file="Zunn-Linux.tar.gz" download><svg><use href="#i-linux"/></svg>Linux</a>
+    </div>
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <span class="num">01</span>
+      <h2>Everything in reach</h2>
+      <p class="sub">Projects, apps, links and notes, one keystroke away. Nothing leaves your computer.</p>
+      <div class="grid">
+        <div class="card reveal"><h3>Projects</h3><p>Open a folder in your editor, in its folder, or in a terminal.</p></div>
+        <div class="card reveal"><h3>Apps</h3><p>Find anything you have installed and launch it.</p></div>
+        <div class="card reveal"><h3>Web</h3><p>Pinned links, and a search bar that also takes shortcuts like <code>!yt</code>.</p></div>
+        <div class="card reveal"><h3>Notes</h3><p>Plain notes that save themselves, with an optional alarm.</p></div>
+        <div class="card reveal"><h3>Background</h3><p>Choose a picture and set how visible it is.</p></div>
+        <div class="card reveal"><h3>Local</h3><p>Your data is one file on your machine. No account needed.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="download">
+    <div class="wrap">
+      <span class="num">02</span>
+      <h2>Download</h2>
+      <p class="sub">Version 1.0.0. Free, MIT licensed. Zunn starts in your tray and opens with <kbd>Alt</kbd> + <kbd>Space</kbd>.</p>
+      <div class="dl">
+        <div class="card reveal">
+          <div class="os"><svg><use href="#i-win"/></svg><div><h3>Windows</h3><p>Windows 10 and 11, 64-bit</p></div></div>
+          <div class="cta">
+            <a class="btn solid" href="downloads/Zunn.exe" data-file="Zunn.exe" download>Installer</a>
+            <a class="btn" href="downloads/Zunn-Portable.exe" data-file="Zunn-Portable.exe" download>Portable</a>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="os"><svg><use href="#i-mac"/></svg><div><h3>macOS</h3><p>Coming soon</p></div></div>
+          <span class="btn off">Not yet available</span>
+        </div>
+        <div class="card reveal">
+          <div class="os"><svg><use href="#i-linux"/></svg><div><h3>Linux</h3><p>64-bit, any recent distribution</p></div></div>
+          <a class="btn solid" href="downloads/Zunn-Linux.tar.gz" data-file="Zunn-Linux.tar.gz" download>Download</a>
+        </div>
+      </div>
+
+      <h3 class="step">Windows</h3>
+      <p class="note" style="margin-top:0">Run the installer and finish the steps. Zunn opens in your tray. If Windows shows a SmartScreen notice, choose More info, then Run anyway. The portable file needs no installation.</p>
+
+      <h3 class="step">Linux</h3>
+      <p class="note" style="margin-top:0">Extract the archive, then run the app inside it.</p>
+<pre>tar -xzf Zunn-Linux.tar.gz
+cd Zunn
+chmod +x zunn
+./zunn</pre>
+      <p class="note">If it reports a sandbox error, start it with <code>--no-sandbox</code>. On Wayland the hotkey may not work, so click the tray icon instead.</p>
+    </div>
+  </section>
+
+  <section id="help">
+    <div class="wrap">
+      <span class="num">03</span>
+      <h2>Help</h2>
+      <p class="sub">The essentials. Press <kbd>?</kbd> inside Zunn to see this guide there.</p>
+
+      <h3 class="step">Shortcuts</h3>
+      <div class="keys reveal">
+        <div><span>Show or hide Zunn</span><kbd>Alt + Space</kbd></div>
+        <div><span>Hide</span><kbd>Esc</kbd></div>
+        <div><span>Switch tabs</span><kbd>Ctrl + 1</kbd> to <kbd>Ctrl + 4</kbd></div>
+        <div><span>Search</span><kbd>Ctrl + F</kbd></div>
+        <div><span>Add to the current tab</span><kbd>Ctrl + N</kbd></div>
+        <div><span>Settings</span><kbd>Ctrl + ,</kbd></div>
+        <div><span>Help</span><kbd>?</kbd></div>
+        <div><span>Open the selected card</span><kbd>Enter</kbd></div>
+        <div><span>Open its folder</span><kbd>Shift + Enter</kbd></div>
+        <div><span>Open a terminal there</span><kbd>Ctrl + Enter</kbd></div>
+      </div>
+      <p class="note">On a Mac, use <kbd>Cmd</kbd> instead of <kbd>Ctrl</kbd>. You can change the main hotkey in Settings.</p>
+
+      <h3 class="step">Add a project</h3>
+      <p class="note" style="margin-top:0">On the Projects tab press <kbd>Ctrl + N</kbd>, or drag a folder or file into the window. Name it and choose how it opens: in your editor, with the system default, or with a program you pick. Right-click any card for more actions, and drag cards to reorder them.</p>
+
+      <h3 class="step">Add an app</h3>
+      <p class="note" style="margin-top:0">On the Apps tab press <kbd>Ctrl + N</kbd> and start typing in Find installed app. Choose a result and the path and icon are filled in for you. You can also drop a program into the window.</p>
+
+      <h3 class="step">Search and shortcuts</h3>
+      <p class="note" style="margin-top:0">Type a web address to open it. Type anything else to search your projects, apps and links, or the web. Begin with a shortcut to search one site.</p>
+<pre>!yt lofi hip hop
+!gh launcher
+!wiki aurora
+!maps coffee</pre>
+      <p class="note">Included: <code>!yt !gh !gpt !wiki !ddg !bing !amazon !maps</code>. Add your own in Settings.</p>
+
+      <h3 class="step">Notes and alarms</h3>
+      <p class="note" style="margin-top:0">Notes save as you type. Tap the clock on a note to choose a future date and time. When it arrives, Zunn comes forward and rings until you dismiss it.</p>
+
+      <h3 class="step">Settings and data</h3>
+      <p class="note" style="margin-top:0">Open Settings with the gear or <kbd>Ctrl + ,</kbd> to change the hotkey, theme, transparency, text size, editor and background. You can also export or import your data.</p>
+
+      <h3 class="step">Questions</h3>
+      <div class="qa">
+        <details><summary>Zunn vanished. Did it close?</summary><p>No. It hides when you click away. Press the hotkey or click the tray icon. Choose Quit in the tray menu to exit.</p></details>
+        <details><summary>The hotkey does nothing.</summary><p>Another app may already use <kbd>Alt + Space</kbd>. Pick a different one in Settings.</p></details>
+        <details><summary>An app is missing from the list.</summary><p>Drop its shortcut or program into the Add App window.</p></details>
+        <details><summary>Where is my data stored?</summary><p>In one file on your computer. Settings, Data, Show file will take you there.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Zunn 1.0.0</span>
+    <span>MIT license</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

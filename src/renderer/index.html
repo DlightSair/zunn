@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; base-uri 'none'; form-action 'none';" />
+  <title>Zunn</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell" id="shell">
+    <div class="bg" id="bg" aria-hidden="true"></div>
+
+    <header class="titlebar" id="titlebar">
+      <span class="who" id="who"></span>
+      <div class="drag-spacer"></div>
+      <div class="win-actions">
+        <button class="icon-btn" id="btn-pin" title="Always on top"></button>
+        <button class="icon-btn" id="btn-help" title="Help"></button>
+        <button class="icon-btn" id="btn-settings" title="Settings — Ctrl+,"></button>
+        <button class="icon-btn" id="btn-hide" title="Hide — stays in the tray"></button>
+      </div>
+    </header>
+
+    <div class="omnibar" id="omnibar">
+      <span class="omni-icon" aria-hidden="true"></span>
+      <span class="omni-chip" id="omni-chip" hidden></span>
+      <input id="omni" type="text" autocomplete="off" spellcheck="false" placeholder="Search or type a URL" />
+      <button class="omni-clear" id="omni-clear" hidden aria-label="Clear search">&times;</button>
+    </div>
+
+    <nav class="tabs" id="tabs" role="tablist"></nav>
+    <div class="scroll-indicator hidden" id="scroll-indicator" aria-hidden="true"><span></span></div>
+
+    <main class="view" id="view" tabindex="-1"></main>
+  </div>
+
+  <div class="resize-grip" aria-hidden="true"></div>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <div class="modal-backdrop" id="modal-backdrop" hidden>
+    <div class="modal" id="modal" role="dialog" aria-modal="true"></div>
+  </div>
+
+  <div class="drop-overlay" id="drop-overlay" hidden>
+    <div class="drop-card">Drop a folder to add a project</div>
+  </div>
+
+  <div class="alarm-overlay" id="alarm-overlay" hidden>
+    <div class="alarm-card" id="alarm-card"></div>
+  </div>
+
+  <script src="intro.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

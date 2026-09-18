@@ -1,0 +1,66 @@
+{
+  "name": "zunn",
+  "productName": "Zunn",
+  "version": "1.0.0",
+  "description": "A quiet tray launcher for projects, apps, links and notes.",
+  "main": "src/main/index.js",
+  "author": "hghayman1",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux",
+    "preview": "node tools/preview-server.js"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.hghayman.zunn",
+    "productName": "Zunn",
+    "files": [
+      "src/**/*",
+      "!src/renderer/__preview.html",
+      "assets/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "artifactName": "Zunn.${ext}"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "assets/icon.png",
+      "category": "public.app-category.productivity",
+      "artifactName": "Zunn.${ext}"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "icon": "assets/icon.png",
+      "category": "Utility",
+      "artifactName": "Zunn.${ext}"
+    },
+    "portable": {
+      "artifactName": "Zunn-Portable.${ext}"
+    }
+  }
+}
