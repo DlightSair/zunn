@@ -1,6 +1,5 @@
-// Where downloads live. Leave empty to serve from ./downloads, or set to a release URL,
-// e.g. "https://github.com/USER/REPO/releases/latest/download/".
-const DOWNLOAD_BASE = "";
+
+const DOWNLOAD_BASE = "https://github.com/DlightSair/zunn/releases/latest/downlaod";
 
 (() => {
   document.querySelectorAll("[data-file]").forEach((a) => {

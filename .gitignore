@@ -3,7 +3,7 @@ dist/
 release/
 *.log
 .DS_Store
-website/downloads/
+docs/downloads/
 
 .env
 .env.*
