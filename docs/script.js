@@ -1,9 +1,9 @@
 
-const DOWNLOAD_BASE = "https://github.com/DlightSair/zunn/releases/latest/downlaod";
+const DOWNLOAD_BASE = "https://github.com/DlightSair/zunn/releases/latest/download/";
 
 (() => {
   document.querySelectorAll("[data-file]").forEach((a) => {
-    a.href = (DOWNLOAD_BASE || "downloads/") + a.dataset.file;
+    a.href = (DOWNLOAD_BASE || "downloads/").replace(/\/*$/, "/") + a.dataset.file;
   });
 
   const canvas = document.getElementById('stars');
